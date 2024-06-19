@@ -9,10 +9,10 @@ export default function InputReact({ label }) {
   };
 
   return (
-    <div>
+    <div className={styles.field}>
       <label className={styles.label}>{label}</label>
-      <input type="text" value={value} onChange={handleChange} />
-      <p>Value: {value}</p>
+      <input className={styles.input} type="text" value={value} onChange={handleChange} />
+      <p className={styles.text}>Value: {value}</p>
     </div>
   );
 }

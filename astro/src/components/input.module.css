@@ -1,3 +1,18 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .label {
-    color: blue;
+  color: blue;
+  font-weight: bold;
+}
+
+.input {
+}
+
+.text {
+  color: blue;
+  font-weight: bold;
 }

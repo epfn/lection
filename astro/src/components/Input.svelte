@@ -1,19 +1,33 @@
-<script lang="ts">
-  export let label: string;
+<script>
+  export let label;
 
-  let value: string = "";
+  let value = "";
 </script>
 
-<div>
-  <label for="text">{label}</label>
-  <input id="text" type="text" bind:value />
-  <p>{value}</p>
+<div class="field">
+  <label class="label" for="text">{label}</label>
+  <input class="input" id="text" type="text" bind:value />
+  <p class="text">Value: {value}</p>
 </div>
 
 <style>
-  div {
+  .field {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
+  }
+
+  .label {
+    color: orangered;
+    font-weight: bold;
+  }
+
+  .input {
+    @apply ring-orange-500 border-orange-500;
+  }
+
+  .text {
+    color: orangered;
+    font-weight: bold;
   }
 </style>

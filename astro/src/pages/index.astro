@@ -1,5 +1,6 @@
 ---
-import Input from "../components/Input.svelte";
+import InputReact from "../components/InputReact.jsx";
+import InputSvelte from "../components/Input.svelte";
 ---
 
 <html lang="en">
@@ -11,9 +12,31 @@ import Input from "../components/Input.svelte";
     <title>Astro</title>
   </head>
   <body>
-    <div class="p-4">
-      <Input client:load label="JS включён" />
-      <Input label="JS выключен" />
-    </div>
+    <section>
+      <div>
+        <InputSvelte client:load label="Svelte JS ON" />
+      </div>
+      <div>
+        <InputSvelte label="Svelte JS OFF" />
+      </div>
+      <div>
+        <InputReact client:load label="React JS ON" />
+      </div>
+      <div>
+        <InputReact label="React JS OFF" />
+      </div>
+    </section>
   </body>
 </html>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  div {
+    padding-inline: 1rem;
+  }
+</style>
